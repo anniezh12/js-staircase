@@ -1,6 +1,6 @@
+//first method using loops
 function staircase(n)
 {
-//first method using loops
 
    for(let i=1;i<=n;i++)
 {    newLine = '';
@@ -16,5 +16,27 @@ function staircase(n)
           }
   }
           console.log(newLine);
+ }
 }
+
+//Second method using recursion
+var newLine = '',i=1;
+
+function staircase2(n)
+{
+  if(i>n)
+  {
+    return;
+  }
+  else {
+    if(i<=n-1)
+    {
+      newLine += ' ';
+    }
+    else
+    {
+          newLine +=  '#';
+    }
+}
+  console.log()
 }
