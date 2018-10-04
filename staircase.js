@@ -20,23 +20,26 @@ function staircase(n)
 }
 
 //Second method using recursion
-var newLine = '',i=1;
 
-function staircase2(n)
+function staircase2(n,row=0,stair='')
 {
-  if(i>n)
-  {
-    return;
-  }
-  else {
-    if(i<=n-1)
+  if(row === n)  { return;  }
+
+    if(n === stair.length)
     {
-      newLine += ' ';
+      console.log(stair);
+      return staircase2(n, row+=1);
     }
-    else
-    {
-          newLine +=  '#';
-    }
+  // if(stair.length <= row)
+  //   {
+  //         stair += '#'
+  //   }
+  // else {
+  //     stair += ' '
+  //   }
+//turnary operator for the above expression
+  stair.length <= row ? stair +='#' : stair+= ' '
 }
-  console.log()
+    staircase2(n, row, stair);
+
 }
